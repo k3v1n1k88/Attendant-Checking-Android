@@ -8,6 +8,12 @@ buildscript {
         classpath 'com.android.tools.build:gradle:2.2.3'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+        testImplementation(
+            'org.junit.jupiter:junit-jupiter-api:5.1.0'
+	    )
+	    testRuntimeOnly(
+	        'org.junit.jupiter:junit-jupiter-engine:5.1.0'
+	    )
     }
 }
 
@@ -19,7 +25,7 @@ allprojects {
 
 test {
     useJUnit {
-	includeCategories 'app.src.test.java.com.example.hoangdang.diemdanh.ExampleUnitTest'
+		includeCategories 'app.src.test.java.com.example.hoangdang.diemdanh.ExampleUnitTest'
     }
 }
 
