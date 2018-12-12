@@ -17,6 +17,12 @@ allprojects {
     }
 }
 
+test {
+    useJUnit {
+	includeCategories 'app.src.test.java.com.example.hoangdang.diemdanh.ExampleUnitTest'
+    }
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
